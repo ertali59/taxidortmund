@@ -28,5 +28,3 @@
 Diese Website läuft auf **GitHub Pages** – kostenlos, schnell und zuverlässig.
 
 ---
-
-*Fotos: [Lexi Anderson](https://unsplash.com/@lexianderson) & [Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w) on [Unsplash](https://unsplash.com)*
