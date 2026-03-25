@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi-AC 24/7 Dortmund – Flughafentransfer & Taxiservice | Jetzt anrufen</title>
+  <meta name="description" content="Taxi-AC 24/7 Dortmund – Flughafentransfer zu Festpreisen: Köln/Bonn ab 190€, Düsseldorf ab 130€, Dortmund ab 30€. Rund um die Uhr erreichbar. Jetzt anrufen!">
+  <meta name="keywords" content="Taxi Dortmund, Flughafentransfer Dortmund, Taxi Köln Bonn Flughafen, Taxi Düsseldorf Flughafen, Taxiservice Dortmund 24h, Taxi bestellen Dortmund">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --yellow: #f5c518;
+      --yellow-dark: #d4a800;
+      --white: #f5f3ee;
+      --gray: #777;
+      --card-bg: #111;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 2.5rem;
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,197,24,0.12);
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.7rem; letter-spacing: 3px; color: var(--yellow);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .logo span { color: var(--white); }
+    .nav-tel a {
+      color: var(--white); text-decoration: none;
+      font-weight: 600; font-size: 0.95rem;
+      border: 1px solid var(--yellow);
+      padding: 0.5rem 1.3rem; border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .nav-tel a:hover { background: var(--yellow); color: var(--black); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 9rem 2.5rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 75% 40%, rgba(245,197,24,0.07) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(245,197,24,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--yellow); margin-bottom: 1.8rem;
+      opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
+    }
+    .hero-tag::before {
+      content: ''; display: block;
+      width: 28px; height: 1px; background: var(--yellow);
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.8rem, 11vw, 9.5rem);
+      line-height: 0.88; letter-spacing: 2px;
+      max-width: 860px;
+      opacity: 0; animation: fadeUp 0.6s 0.35s forwards;
+    }
+    .hero h1 .accent { color: var(--yellow); }
+    .hero-sub {
+      margin-top: 2rem;
+      font-size: 1.1rem; color: #999;
+      max-width: 460px; line-height: 1.75; font-weight: 300;
+      opacity: 0; animation: fadeUp 0.6s 0.55s forwards;
+    }
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s 0.75s forwards;
+    }
+    .btn-primary {
+      background: var(--yellow); color: var(--black);
+      font-weight: 700; font-size: 1.05rem;
+      padding: 1rem 2.5rem; text-decoration: none; border-radius: 2px;
+      transition: transform 0.15s, background 0.15s; letter-spacing: 0.5px;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+    .btn-secondary {
+      color: var(--white); font-size: 1.05rem;
+      padding: 1rem 1.8rem; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 2px;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
+    .hero-stats {
+      margin-top: 5rem;
+      display: flex; gap: 3.5rem; flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 2.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.95s forwards;
+    }
+    .stat { display: flex; flex-direction: column; }
+    .stat-n {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem; color: var(--yellow); line-height: 1;
+    }
+    .stat-l { font-size: 0.72rem; color: var(--gray); text-transform: uppercase; letter-spacing: 2.5px; margin-top: 0.3rem; }
+
+    /* SECTIONS */
+    .section { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+    .sec-label { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.8rem; }
+    .sec-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 1px; line-height: 1; margin-bottom: 3.5rem;
+    }
+
+    /* PRICES */
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+    }
+    .price-card {
+      background: var(--card-bg);
+      padding: 2.5rem 2rem 2rem;
+      position: relative; overflow: hidden;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .price-card:hover { background: #161616; border-bottom-color: var(--yellow); }
+    .price-card .route-from {
+      font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gray); margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .price-card .route-from::after {
+      content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07);
+    }
+    .price-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.9rem; letter-spacing: 1px;
+      color: var(--white); margin-bottom: 0.4rem; line-height: 1.1;
+    }
+    .price-card .dest { font-size: 0.82rem; color: var(--gray); margin-bottom: 1.8rem; }
+    .price-row { display: flex; align-items: baseline; gap: 1rem; }
+    .price-new { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; color: var(--yellow); line-height: 1; }
+    .price-old { font-size: 1.1rem; color: #555; text-decoration: line-through; }
+    .price-label { font-size: 0.7rem; color: var(--gray); margin-top: 0.5rem; letter-spacing: 1px; text-transform: uppercase; }
+    .badge-save {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: var(--yellow); color: var(--black);
+      font-size: 0.65rem; font-weight: 700;
+      padding: 0.25rem 0.6rem; letter-spacing: 1px; text-transform: uppercase;
+    }
+
+    /* SERVICES */
+    .services-stripe { background: #0d0d0d; border-top: 1px solid rgba(245,197,24,0.08); border-bottom: 1px solid rgba(245,197,24,0.08); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .service-card {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.2s;
+    }
+    .service-card:last-child { border-right: none; }
+    .service-card:hover { background: #111; }
+    .service-icon { font-size: 1.8rem; margin-bottom: 1.2rem; }
+    .service-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem; letter-spacing: 1px;
+      color: var(--yellow); margin-bottom: 0.5rem;
+    }
+    .service-card p { color: #888; font-size: 0.85rem; line-height: 1.65; }
+
+    /* WHY */
+    .why-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    @media (max-width: 720px) { .why-wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 1.6rem; }
+    .why-list li { display: flex; gap: 1rem; align-items: flex-start; }
+    .check-box {
+      min-width: 22px; height: 22px;
+      background: var(--yellow); color: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800; margin-top: 3px;
+    }
+    .why-text strong { display: block; margin-bottom: 0.2rem; font-weight: 500; font-size: 0.97rem; }
+    .why-text span { font-size: 0.83rem; color: var(--gray); line-height: 1.5; }
+
+    .cta-box {
+      background: var(--yellow); color: var(--black);
+      padding: 3rem 2.5rem;
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .cta-box .cta-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; opacity: 0.55; }
+    .cta-box .cta-tel {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      letter-spacing: 3px; line-height: 1;
+      text-decoration: none; color: var(--black); word-break: break-all;
+    }
+    .cta-box .cta-tel:hover { opacity: 0.75; }
+    .cta-box .cta-sub { font-size: 0.82rem; opacity: 0.55; }
+    .wa-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #000; color: #fff;
+      padding: 0.8rem 1.5rem; text-decoration: none;
+      font-size: 0.9rem; font-weight: 600; border-radius: 2px;
+      transition: opacity 0.2s; width: fit-content;
+    }
+    .wa-btn:hover { opacity: 0.8; }
+
+    /* BOTTOM CTA */
+    .bottom-cta { text-align: center; padding: 7rem 2rem; }
+    .bottom-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 9vw, 7rem);
+      letter-spacing: 2px; line-height: 0.88; margin-bottom: 1.5rem;
+    }
+    .bottom-cta h2 span { color: var(--yellow); }
+    .bottom-cta p { color: var(--gray); max-width: 400px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .contact-row {
+      display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
+      margin-top: 3rem; padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .contact-row a { color: #666; text-decoration: none; font-size: 0.88rem; }
+    .contact-row a:hover { color: var(--yellow); }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: 0.72rem; color: #333;
+    }
+    footer a { color: #444; text-decoration: none; }
+    footer a:hover { color: var(--gray); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 540px) {
+      nav { padding: 1rem 1.2rem; }
+      .hero { padding: 7.5rem 1.3rem 3rem; }
+      .section { padding: 4rem 1.3rem; }
+      .hero-stats { gap: 2rem; }
+      .cta-box { padding: 2rem 1.5rem; }
+      .service-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🚕 Taxi-AC <span>24/7</span></div>
+    <div class="nav-tel"><a href="tel:+4917646066141">☎ Jetzt anrufen</a></div>
+  </nav>
+
+  <section class="hero">
+    <p class="hero-tag">Taxiservice Dortmund &amp; Region</p>
+    <h1>Ihr Taxi.<br><span class="accent">Festpreis.</span><br>Jederzeit.</h1>
+    <p class="hero-sub">Zuverlässiger Taxiservice und Flughafentransfer in Dortmund – rund um die Uhr, zu garantierten Festpreisen.</p>
+    <div class="hero-cta">
+      <a href="tel:+4917646066141" class="btn-primary">☎ +49 176 46066141</a>
+      <a href="#festpreise" class="btn-secondary">Unsere Preise →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">24/7</span><span class="stat-l">Erreichbar</span></div>
+      <div class="stat"><span class="stat-n">3</span><span class="stat-l">Flughäfen</span></div>
+      <div class="stat"><span class="stat-n">5★</span><span class="stat-l">Bewertungen</span></div>
+      <div class="stat"><span class="stat-n">0€</span><span class="stat-l">Überraschungen</span></div>
+    </div>
+  </section>
+
+  <div id="festpreise">
+    <div class="section">
+      <p class="sec-label">Garantierte Festpreise</p>
+      <h2 class="sec-title">Flughafentransfer<br>ab Dortmund</h2>
+      <div class="prices-grid">
+
+        <div class="price-card">
+          <span class="badge-save">Sie sparen 20€</span>
+          <p class="route-from">ab DO Hauptbahnhof</p>
+          <h3>Köln/Bonn<br>Flughafen</h3>
+          <p class="dest">DO → Köln/Bonn Flughafen · ca. 65 Min.</p>
+          <div class="price-row">
+            <span class="price-new">190€</span>
+            <span class="price-old">210€</span>
+          </div>
+          <p class="price-label">Festpreis · inkl. aller Kosten</p>
+        </div>
+
+        <div class="price-card">
+          <span class="badge-save">Sie sparen 5€</span>
+          <p class="route-from">ab DO Hauptbahnhof</p>
+          <h3>Düsseldorf<br>Flughafen</h3>
+          <p class="dest">DO → DUS Flughafen · ca. 45 Min.</p>
+          <div class="price-row">
+            <span class="price-new">130€</span>
+            <span class="price-old">135€</span>
+          </div>
+          <p class="price-label">Festpreis · inkl. aller Kosten</p>
+        </div>
+
+        <div class="price-card">
+          <span class="badge-save">Sie sparen 5€</span>
+          <p class="route-from">ab DO Hauptbahnhof</p>
+          <h3>Dortmund<br>Flughafen</h3>
+          <p class="dest">HBF → Flughafen DO · ca. 20 Min.</p>
+          <div class="price-row">
+            <span class="price-new">30€</span>
+            <span class="price-old">35€</span>
+          </div>
+          <p class="price-label">Festpreis · inkl. aller Kosten</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="services-stripe">
+    <div class="section">
+      <p class="sec-label">Weitere Leistungen</p>
+      <h2 class="sec-title">Alles aus<br>einer Hand</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🌙</div>
+          <h3>Nachtfahrten</h3>
+          <p>Sicher nach Hause – nach der Party, Spätschicht oder dem Konzert.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏥</div>
+          <h3>Krankenfahrten</h3>
+          <p>Zuverlässige Fahrten zu Arzt, Klinik oder Reha – auch auf Rezept.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎉</div>
+          <h3>Events & Feiern</h3>
+          <p>Hochzeiten, Firmenfeiern, Konzerte – hin und sicher zurück.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📍</div>
+          <h3>Stadtfahrten</h3>
+          <p>Schnelle Fahrten innerhalb Dortmunds – flexibel und pünktlich.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="section">
+      <div class="why-wrap">
+        <div>
+          <p class="sec-label">Warum Taxi-AC 24/7?</p>
+          <h2 class="sec-title">Ihr verlässlicher<br>Partner in DO</h2>
+          <ul class="why-list">
+            <li>
+              <div class="check-box">✓</div>
+              <div class="why-text"><strong>Garantierte Festpreise</strong><span>Kein Taxameter-Stress – Sie wissen vorher genau, was Sie zahlen.</span></div>
+            </li>
+            <li>
+              <div class="check-box">✓</div>
+              <div class="why-text"><strong>24 Stunden, 7 Tage</strong><span>Auch nachts, an Wochenenden und Feiertagen erreichbar.</span></div>
+            </li>
+            <li>
+              <div class="check-box">✓</div>
+              <div class="why-text"><strong>Pünktlichkeit</strong><span>Besonders bei Flughafentransfers – wir planen Puffer ein.</span></div>
+            </li>
+            <li>
+              <div class="check-box">✓</div>
+              <div class="why-text"><strong>Einfache Buchung</strong><span>Anruf oder WhatsApp – schnell, direkt, unkompliziert.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="cta-box">
+          <p class="cta-label">Direkt anrufen</p>
+          <a class="cta-tel" href="tel:+4917646066141">+49 176<br>46066141</a>
+          <p class="cta-sub">Oder schreiben Sie uns auf WhatsApp</p>
+          <a href="https://wa.me/4917646066141" class="wa-btn">💬 WhatsApp schreiben</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bottom-cta">
+    <h2>Taxi jetzt<br><span>bestellen</span></h2>
+    <p>Rufen Sie uns an oder schreiben Sie uns – wir sind schnell bei Ihnen in Dortmund.</p>
+    <a href="tel:+4917646066141" class="btn-primary" style="font-size:1.15rem; padding:1.2rem 3rem; margin: 0 auto;">☎ +49 176 46066141</a>
+    <div class="contact-row">
+      <span style="color:#555;">📍 Dortmund &amp; Umgebung</span>
+      <a href="tel:+4917646066141">📞 +49 176 46066141</a>
+      <a href="https://wa.me/4917646066141">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Taxi-AC 24/7 · Dortmund · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    <p style="margin-top:0.4rem; font-size:0.65rem;">Taxiservice Dortmund · Flughafentransfer Köln/Bonn · Düsseldorf · Dortmund Flughafen</p>
+  </footer>
+
+</body>
+</html>
