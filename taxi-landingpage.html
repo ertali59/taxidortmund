@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Jülich – Schnell, Zuverlässig, 24/7 | Ihr Taxiservice Jülich</title>
+  <meta name="description" content="Taxiservice Jülich – jetzt anrufen und sofort ein Taxi bestellen. 24 Stunden, 7 Tage die Woche. Fahrten zum Flughafen, Krankenhaus und überall in der Region.">
+  <meta name="keywords" content="Taxi Jülich, Taxiservice Jülich, Taxi bestellen Jülich, Taxiunternehmen Jülich, Flughafentransfer Jülich">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --yellow: #f5c518;
+      --yellow-dark: #d4a800;
+      --white: #f8f6f0;
+      --gray: #888;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 2rem;
+      background: rgba(10,10,10,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(245,197,24,0.15);
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--yellow);
+      letter-spacing: 2px;
+    }
+    .nav-tel a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid var(--yellow);
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .nav-tel a:hover { background: var(--yellow); color: var(--black); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(245,197,24,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.2s forwards;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      color: var(--white);
+      max-width: 900px;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.4s forwards;
+    }
+    .hero h1 span { color: var(--yellow); }
+    .hero-sub {
+      margin-top: 2rem;
+      font-size: 1.15rem;
+      color: #aaa;
+      max-width: 480px;
+      line-height: 1.7;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.6s forwards;
+    }
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.8s forwards;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: transform 0.15s, background 0.15s;
+      letter-spacing: 0.5px;
+    }
+    .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+    .btn-secondary {
+      display: inline-block;
+      color: var(--white);
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    .hero-badge {
+      margin-top: 4rem;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.6s 1s forwards;
+    }
+    .badge-item { display: flex; flex-direction: column; }
+    .badge-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--yellow);
+      line-height: 1;
+    }
+    .badge-text { font-size: 0.8rem; color: var(--gray); text-transform: uppercase; letter-spacing: 2px; margin-top: 0.2rem; }
+
+    /* SERVICES */
+    .section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 5px; text-transform: uppercase;
+      color: var(--yellow); margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5px;
+      background: rgba(245,197,24,0.1);
+      border: 1px solid rgba(245,197,24,0.1);
+    }
+    .service-card {
+      background: var(--black);
+      padding: 2.5rem 2rem;
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: #111; }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .service-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      margin-bottom: 0.6rem;
+    }
+    .service-card p { color: #999; font-size: 0.9rem; line-height: 1.6; }
+
+    /* WHY US */
+    .why-section {
+      background: #0f0f0f;
+      border-top: 1px solid rgba(245,197,24,0.1);
+      border-bottom: 1px solid rgba(245,197,24,0.1);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 700px) { .why-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+    .why-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .why-list .check {
+      width: 24px; height: 24px; min-width: 24px;
+      background: var(--yellow);
+      color: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700;
+      margin-top: 2px;
+    }
+    .why-list .why-text strong { display: block; margin-bottom: 0.2rem; font-weight: 500; }
+    .why-list .why-text span { font-size: 0.85rem; color: var(--gray); }
+
+    .call-box {
+      background: var(--yellow);
+      color: var(--black);
+      padding: 3rem 2.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .call-box p { font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; }
+    .call-box .tel {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      letter-spacing: 2px;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--black);
+    }
+    .call-box .tel:hover { opacity: 0.8; }
+    .call-box small { font-size: 0.8rem; opacity: 0.6; }
+
+    /* CONTACT */
+    .contact-section { text-align: center; padding: 6rem 2rem; }
+    .contact-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: 2px;
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+    }
+    .contact-section h2 span { color: var(--yellow); }
+    .contact-section p { color: var(--gray); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .contact-info {
+      display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 3rem;
+    }
+    .contact-info a { color: var(--gray); text-decoration: none; font-size: 0.9rem; }
+    .contact-info a:hover { color: var(--yellow); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #444;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 500px) {
+      nav { padding: 1rem; }
+      .logo { font-size: 1.4rem; }
+      .hero { padding: 7rem 1.2rem 3rem; }
+      .hero-badge { gap: 2rem; }
+      .section { padding: 4rem 1.2rem; }
+      .call-box { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">🚕 Taxi Jülich</div>
+    <div class="nav-tel"><a href="tel:+492461000000">☎ Jetzt anrufen</a></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-label">Taxiservice Jülich &amp; Region</p>
+    <h1>Ihr Taxi.<br><span>Jederzeit.</span></h1>
+    <p class="hero-sub">Schnell, zuverlässig und rund um die Uhr für Sie da – in Jülich und der gesamten Region.</p>
+    <div class="hero-cta">
+      <a href="tel:+492461000000" class="btn-primary">☎ Jetzt Taxi rufen</a>
+      <a href="#leistungen" class="btn-secondary">Unsere Leistungen</a>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-item"><span class="badge-num">24/7</span><span class="badge-text">Erreichbar</span></div>
+      <div class="badge-item"><span class="badge-num">10+</span><span class="badge-text">Jahre Erfahrung</span></div>
+      <div class="badge-item"><span class="badge-num">5★</span><span class="badge-text">Kundenbewertung</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <div id="leistungen">
+    <div class="section">
+      <p class="section-label">Was wir anbieten</p>
+      <h2 class="section-title">Unsere Leistungen</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏙️</div>
+          <h3>Stadtfahrten</h3>
+          <p>Schnelle und zuverlässige Fahrten innerhalb von Jülich – zu jeder Tages- und Nachtzeit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✈️</div>
+          <h3>Flughafentransfer</h3>
+          <p>Komfortabler Transfer zum Flughafen Köln/Bonn, Düsseldorf oder Weeze – pünktlich und stressfrei.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏥</div>
+          <h3>Krankenfahrten</h3>
+          <p>Zuverlässige Fahrten zu Arzt, Krankenhaus oder Reha – auch mit Krankenkassen-Abrechnung.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎉</div>
+          <h3>Veranstaltungen</h3>
+          <p>Taxifahrten für Hochzeiten, Firmenfeiern und Events – auch für größere Gruppen buchbar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌙</div>
+          <h3>Nachtfahrten</h3>
+          <p>Sicher nach Hause – nach der Party, nach der Spätschicht, zu jeder Uhrzeit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Kurierdienst</h3>
+          <p>Schnelle Lieferung von Paketen und Dokumenten in Jülich und Umgebung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why-section">
+    <div class="section">
+      <div class="why-grid">
+        <div>
+          <p class="section-label">Warum wir?</p>
+          <h2 class="section-title">Ihr verlässlicher<br>Partner</h2>
+          <ul class="why-list">
+            <li>
+              <div class="check">✓</div>
+              <div class="why-text"><strong>24 Stunden, 7 Tage</strong><span>Wir sind immer erreichbar – auch nachts und an Feiertagen.</span></div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div class="why-text"><strong>Festpreise &amp; Transparenz</strong><span>Keine Überraschungen – fairer Taxameter oder Festpreis nach Vereinbarung.</span></div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div class="why-text"><strong>Erfahrene Fahrer</strong><span>Ortskundige, freundliche und geprüfte Fahrer.</span></div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div class="why-text"><strong>Pünktlichkeit garantiert</strong><span>Besonders wichtig bei Flughafentransfers und Terminen.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="call-box">
+          <p>Jetzt direkt anrufen</p>
+          <a class="tel" href="tel:+492461000000">0246 1 000000</a>
+          <small>Oder schreiben Sie uns eine WhatsApp</small>
+          <a href="https://wa.me/492461000000" class="btn-secondary" style="border-color:rgba(0,0,0,0.2); color:#000; margin-top:0.5rem; display:inline-block; padding:0.7rem 1.5rem; text-decoration:none; font-size:0.9rem; font-weight:600;">WhatsApp schreiben →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact-section">
+    <h2>Taxi jetzt<br><span>bestellen</span></h2>
+    <p>Rufen Sie uns an oder schreiben Sie uns – wir sind in wenigen Minuten bei Ihnen in Jülich.</p>
+    <a href="tel:+492461000000" class="btn-primary" style="font-size:1.2rem; padding:1.2rem 3rem;">☎ Jetzt anrufen</a>
+    <div class="contact-info">
+      <span>📍 Jülich &amp; Umgebung</span>
+      <a href="tel:+492461000000">📞 0246 1 000000</a>
+      <a href="mailto:info@taxi-juelich.de">✉ info@taxi-juelich.de</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Taxi Jülich · <a href="#" style="color:#555; text-decoration:none;">Impressum</a> · <a href="#" style="color:#555; text-decoration:none;">Datenschutz</a></p>
+    <p style="margin-top:0.5rem; font-size:0.7rem;">Taxiservice Jülich, Düren, Aachen, Eschweiler und Umgebung</p>
+  </footer>
+
+</body>
+</html>
