@@ -22,6 +22,15 @@
 | `krankenfahrten-dortmund.html` | Krankenfahrten zu Arzt, Klinik & Reha |
 | `grossraumtaxi-dortmund.html` | Großraumtaxi für Gruppen & viel Gepäck |
 | `taxi-dortmund-24h.html` | Taxi rund um die Uhr |
+| `impressum.html` | Impressum (Pflichtangaben) |
+
+---
+
+## 🏢 Firmendaten
+
+Taxi AC Einzelunternehmen
+Neue Sendstraße 26, 44309 Dortmund
+E-Mail: taxi-ac@online.de
 
 ---
 

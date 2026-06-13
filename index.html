@@ -11,8 +11,12 @@
   <meta property="og:description" content="Taxi Dortmund 24h erreichbar. Flughafentransfer zu Festpreisen, Krankenfahrten, Großraumtaxi und mehr.">
   <meta property="og:url" content="https://www.taxikreisdortmund.de/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.taxikreisdortmund.de/hero.jpg">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
@@ -29,10 +33,14 @@
     "description": "Taxi Dortmund, Flughafentransfer Dortmund Flughafen, Krankenfahrten, Großraumtaxi und Festpreisfahrten rund um die Uhr.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Neue Sendstraße 26",
+      "postalCode": "44309",
       "addressLocality": "Dortmund",
       "addressRegion": "Nordrhein-Westfalen",
       "addressCountry": "DE"
     },
+    "legalName": "Taxi AC Einzelunternehmen",
+    "email": "taxi-ac@online.de",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 51.5136,
@@ -49,16 +57,26 @@
       "ratingValue": "5",
       "bestRating": "5",
       "worstRating": "1",
-      "ratingCount": "27"
+      "ratingCount": "8"
     },
     "areaServed": ["Dortmund", "Köln", "Bonn", "Düsseldorf"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Flughafentransfer Festpreise",
+      "name": "Leistungen von Taxi-AC 24/7",
       "itemListElement": [
         { "@type": "Offer", "name": "Transfer Köln/Bonn Flughafen", "price": "190", "priceCurrency": "EUR" },
         { "@type": "Offer", "name": "Transfer Düsseldorf Flughafen", "price": "130", "priceCurrency": "EUR" },
-        { "@type": "Offer", "name": "Transfer Dortmund Flughafen", "price": "30", "priceCurrency": "EUR" }
+        { "@type": "Offer", "name": "Transfer Dortmund Flughafen", "price": "30", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Krankenfahrten" },
+        { "@type": "Offer", "name": "Dialysefahrten" },
+        { "@type": "Offer", "name": "Kur- und Rehafahrten" },
+        { "@type": "Offer", "name": "Großraumtaxi" },
+        { "@type": "Offer", "name": "Stretchlimousine" },
+        { "@type": "Offer", "name": "Fernfahrten" },
+        { "@type": "Offer", "name": "Kurierfahrten" },
+        { "@type": "Offer", "name": "Schulfahrten" },
+        { "@type": "Offer", "name": "Club- und Discofahrten" },
+        { "@type": "Offer", "name": "Besorgungsfahrten" }
       ]
     }
   }
@@ -202,6 +220,50 @@
           <h3>Taxi Dortmund 24h</h3>
           <p>Tag und Nacht erreichbar – auch an Wochenenden und Feiertagen.</p>
           <a href="/taxi-dortmund-24h.html" class="card-link">Mehr erfahren →</a>
+        </div>
+      </div>
+      <div class="services-grid" style="margin-top:2px;">
+        <div class="service-card">
+          <div class="service-icon">🎀</div>
+          <h3>Stretchlimousine</h3>
+          <p>Für besondere Anlässe wie Hochzeiten oder Geburtstage – stilvoll unterwegs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💉</div>
+          <h3>Dialysefahrten</h3>
+          <p>Regelmäßige Fahrten zu Dialyse-Terminen – zuverlässig und planbar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛣️</div>
+          <h3>Fernfahrten</h3>
+          <p>Längere Strecken außerhalb Dortmunds – bequem und ohne Umsteigen.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Kurierfahrten</h3>
+          <p>Schneller Transport von Paketen und Dokumenten in Dortmund und Umgebung.</p>
+        </div>
+      </div>
+      <div class="services-grid" style="margin-top:2px;">
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Schulfahrten</h3>
+          <p>Sicherer und zuverlässiger Transport zur Schule – auch regelmäßig buchbar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎶</div>
+          <h3>Club- &amp; Discofahrten</h3>
+          <p>Sicher zur Party und sicher wieder nach Hause – auch spät nachts.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧑‍⚕️</div>
+          <h3>Kur- &amp; Rehafahrten</h3>
+          <p>Transport zu Kur- und Reha-Einrichtungen – zuverlässig und planbar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛒</div>
+          <h3>Besorgungsfahrten</h3>
+          <p>Unterstützung bei Einkäufen und Erledigungen – wir bringen Sie hin und zurück.</p>
         </div>
       </div>
     </div>
@@ -354,7 +416,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Taxi-AC 24/7 · Dortmund · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    <p>© 2026 Taxi-AC 24/7 · Dortmund · <a href="/impressum.html">Impressum</a> · <a href="#">Datenschutz</a></p>
     <p style="margin-top:0.4rem; font-size:0.65rem;">Taxi Dortmund · Flughafentransfer Dortmund · Taxi Flughafen Dortmund · Krankenfahrten Dortmund · Großraumtaxi Dortmund · Taxi Dortmund 24h · Günstiges Taxi Dortmund</p>
     <p class="footer-nav">
       <a href="/">Start</a>·<a href="/flughafentransfer-dortmund.html">Flughafentransfer</a>·<a href="/krankenfahrten-dortmund.html">Krankenfahrten</a>·<a href="/grossraumtaxi-dortmund.html">Großraumtaxi</a>·<a href="/taxi-dortmund-24h.html">24h Service</a>
