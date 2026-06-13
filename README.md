@@ -13,6 +13,18 @@
 
 ---
 
+## 📄 Seiten
+
+| Seite | Thema |
+|---|---|
+| `index.html` | Startseite – Übersicht aller Leistungen |
+| `flughafentransfer-dortmund.html` | Flughafentransfer Festpreise (Köln/Bonn, Düsseldorf, Dortmund) |
+| `krankenfahrten-dortmund.html` | Krankenfahrten zu Arzt, Klinik & Reha |
+| `grossraumtaxi-dortmund.html` | Großraumtaxi für Gruppen & viel Gepäck |
+| `taxi-dortmund-24h.html` | Taxi rund um die Uhr |
+
+---
+
 ## ✈️ Festpreise Flughafentransfer
 
 | Strecke | Preis |
@@ -26,5 +38,9 @@
 ## 🛠️ Technik
 
 Diese Website läuft auf **GitHub Pages** – kostenlos, schnell und zuverlässig.
+Gemeinsames Styling liegt in `style.css`, jede Seite hat eigene SEO-Metadaten
+und strukturierte Daten (Schema.org) für Google.
 
 ---
+
+*Fotos: [Lexi Anderson](https://unsplash.com/@lexianderson) & [Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w) on [Unsplash](https://unsplash.com)*
