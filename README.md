@@ -18,7 +18,7 @@
 | Seite | Thema |
 |---|---|
 | `index.html` | Startseite – Übersicht aller Leistungen |
-| `flughafentransfer-dortmund.html` | Flughafentransfer Festpreise (Köln/Bonn, Düsseldorf, Dortmund) |
+| `flughafentransfer-dortmund.html` | Flughafentransfer Festpreise (Köln/Bonn, Düsseldorf, Dortmund, Paderborn/Lippstadt, Frankfurt, Amsterdam) |
 | `krankenfahrten-dortmund.html` | Krankenfahrten zu Arzt, Klinik & Reha |
 | `grossraumtaxi-dortmund.html` | Großraumtaxi für Gruppen & viel Gepäck |
 | `taxi-dortmund-24h.html` | Taxi rund um die Uhr |
@@ -38,9 +38,12 @@ E-Mail: taxi-ac@online.de
 
 | Strecke | Preis |
 |---|---|
-| Dortmund → Köln/Bonn Flughafen | 190 € |
-| Dortmund → Düsseldorf Flughafen | 130 € |
-| Dortmund HBF → Flughafen DO | 30 € |
+| Dortmund → Köln/Bonn Flughafen | 210 € |
+| Dortmund → Düsseldorf Flughafen | 145 € |
+| Dortmund HBF → Flughafen DO | 40 € |
+| Dortmund → Paderborn/Lippstadt Flughafen | 200 € |
+| Dortmund → Frankfurt Flughafen | 500 € |
+| Dortmund → Amsterdam Flughafen | 550 € |
 
 ---
 
