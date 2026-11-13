@@ -9,7 +9,7 @@ Statische Website für Taxi-AC 24/7 in Dortmund.
 | Datei | Inhalt |
 |---|---|
 | `index.html` | Startseite und Leistungsübersicht |
-| `flughafentransfer-dortmund.html` | Flughafentransfers und Festpreise |
+| `flughafentransfer-dortmund.html` | Flughafentransfers und Festpreise (Köln/Bonn, Düsseldorf, Dortmund, Paderborn/Lippstadt, Frankfurt, Amsterdam) |
 | `krankenfahrten-dortmund.html` | Kranken-, Dialyse- und Rehafahrten |
 | `grossraumtaxi-dortmund.html` | Großraumtaxi |
 | `taxi-dortmund-24h.html` | Taxi-Service rund um die Uhr |
@@ -46,7 +46,7 @@ Statische Website für Taxi-AC 24/7 in Dortmund.
 - Hosting und Veröffentlichung über GitHub Pages
 - Gemeinsames Design über `style.css`
 - SEO-Metadaten und strukturierte Daten (Schema.org) in den HTML-Dateien
-- Schriftarten Bebas Neue und DM Sans lokal im Verzeichnis `fonts/` (nach abgeschlossener Umstellung)
+- Schriftarten Bebas Neue und DM Sans werden lokal aus `fonts/` geladen
 - Eigene Domain: `www.taxikreisdortmund.de`
 
 ## Veröffentlichung
@@ -56,6 +56,17 @@ Die Website wird über GitHub Pages aus dem konfigurierten Branch und Verzeichni
 Änderungen am veröffentlichten Quellcode werden nach dem Push in den konfigurierten Veröffentlichungszweig von GitHub Pages übernommen.
 
 Die Domain-Konfiguration wird über die Datei `CNAME` und die DNS-Einstellungen des Domain-Anbieters verwaltet.
+
+## Festpreise Flughafentransfer
+
+| Strecke | Preis |
+|---|---|
+| Dortmund → Köln/Bonn Flughafen | 210 € |
+| Dortmund → Düsseldorf Flughafen | 145 € |
+| Dortmund HBF → Flughafen DO | 40 € |
+| Dortmund → Paderborn/Lippstadt Flughafen | 200 € |
+| Dortmund → Frankfurt Flughafen | 500 € |
+| Dortmund → Amsterdam Flughafen | 550 € |
 
 ## Pflegehinweise
 
